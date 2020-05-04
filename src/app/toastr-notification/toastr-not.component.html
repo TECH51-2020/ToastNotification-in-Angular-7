@@ -1,0 +1,16 @@
+<div id="toast-container" class="toast-top-right" *ngFor="let item of notifications">  
+    <div class="toast {{cssClass(item) }}" aria-live="polite" style="display: block;">  
+        <button type="button" class="toast-close-button" role="button" (click)="removeNotification(item)">×</button>  
+        <div class="toast-message">  
+            {{item.message}}  
+        </div>  
+        
+    </div>  
+</div>  
+
+/**Write a tag of toastr notification in your HTML file of the component where you want to use the notification.**\
+/**<toastr-notification>
+    <button (click)="showSuccessNotification()">Success Message</button>  
+    <button (click)="showErrorNotification()">Error Message</button> 
+</toastr-notification> **\
+
